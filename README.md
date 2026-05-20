@@ -37,24 +37,7 @@ The framework was designed to separate alpha generation, portfolio construction,
 - Return distribution diagnostics
 - Dashboard visualization
 
----
 
-## Repository Structure
-
-```text
-trading-pipeline/
-│
-├── charts/          # saved dashboard outputs
-├── notebooks/       # research notebooks
-├── scripts/         # execution + utility scripts
-├── src/             # core trading logic
-├── visuals/         # dashboard visualization
-│
-├── README.md
-├── requirements.txt
-└── streamlit_app.py
-
----
 
 ##Tech Stack
 - Python
@@ -85,3 +68,20 @@ The framework normalizes strategy PnL into stable return series before equity co
 
 ##Running the Dashboard
 streamlit run streamlit_app.py
+
+---
+
+## Repository Structure
+
+```text
+trading-pipeline/
+│
+├── charts/          # saved dashboard outputs
+├── notebooks/       # research notebooks
+├── scripts/         # execution + utility scripts
+├── src/             # core trading logic
+├── visuals/         # dashboard visualization
+│
+├── README.md
+├── requirements.txt
+└── streamlit_app.py
