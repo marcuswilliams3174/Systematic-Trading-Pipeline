@@ -1,41 +1,55 @@
 # Systematic Trading Research Platform
 
-End-to-end quantitative trading framework that transforms raw market signals into a fully risk-adjusted portfolio simulation.
+End-to-end quantitative trading framework for transforming raw market signals into a fully risk-adjusted portfolio simulation and performance analytics pipeline.
 
-## Pipeline
+---
 
-Signal → Position → PnL → Risk Normalization → Returns → Equity Curve
+## Overview
 
-## Core Modules
+This project implements a modular systematic trading workflow:
 
-- Signal generation (alpha logic)
-- Position sizing (bounded exposure)
-- Backtesting engine (vectorized)
-- Risk normalization (vol scaling)
-- Performance analytics
-- Streamlit dashboard interface
+Signal Generation → Position Sizing → Strategy PnL → Risk Normalization → Strategy Returns → Equity Curve
 
-## Key Features
+The framework was designed to separate alpha generation, portfolio construction, risk management, and visualization into independent modules similar to institutional quantitative research pipelines.
 
-- Robust return normalization pipeline
-- Stable equity curve construction
+---
+
+## Core Features
+
+### Signal Engine
+- Continuous signal generation framework
+- Bounded exposure logic
+- Modular signal architecture
+
+### Portfolio Construction
+- Position sizing and exposure control
+- Vectorized backtesting pipeline
+- Stable return construction
+
+### Risk Management
+- Volatility normalization
+- Return scaling for compounding stability
+- Drawdown-aware diagnostics
+
+### Performance Analytics
+- Equity curve construction
 - Drawdown analysis
-- Modular architecture (production-style separation)
-- Interactive dashboard (Streamlit)
+- Return distribution diagnostics
+- Dashboard visualization
 
-## Tech Stack
+---
 
-Python, Pandas, NumPy, Matplotlib, Streamlit
+## Repository Structure
 
-## Outputs
-
-- Equity curve
-- Drawdown series
-- Return distribution
-- Signal diagnostics
-- Saved dashboard plots
-
-## How to Run
-
-```bash
-streamlit run streamlit_app.py
+```text
+trading-pipeline/
+│
+├── charts/          # saved dashboard outputs
+├── notebooks/       # research notebooks
+├── scripts/         # execution + utility scripts
+├── src/             # core trading logic
+├── visuals/         # dashboard visualization
+│
+├── README.md
+├── requirements.txt
+└── streamlit_app.py
